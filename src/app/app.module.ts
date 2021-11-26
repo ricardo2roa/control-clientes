@@ -20,6 +20,7 @@ import { ConfiguracionComponent } from './componentes/configuracion/configuracio
 import { NoEncontradoComponent } from './componentes/no-encontrado/no-encontrado.component';
 import { PiePaginaComponent } from './componentes/pie-pagina/pie-pagina.component';
 import {FormsModule} from "@angular/forms";
+import {ClienteService} from "./servicios/cliente.service";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import {FormsModule} from "@angular/forms";
     AngularFirestoreModule,
     AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
