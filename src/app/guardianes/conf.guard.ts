@@ -17,8 +17,8 @@ export class confGuard implements CanActivate{
         if(configuracion?.permitirRegistro){
           return true
         }else{
-          return false
           this.router.navigate(['/login'])
+          return false
         }
       })
     )
