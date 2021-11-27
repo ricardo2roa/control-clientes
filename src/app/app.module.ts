@@ -23,6 +23,8 @@ import {FormsModule} from "@angular/forms";
 import {ClienteService} from "./servicios/cliente.service";
 import {LoginService} from "./servicios/login.service";
 import {AuthGuard} from "./guardianes/auth.guard";
+import {ConfiguracionService} from "./servicios/configuracion.service";
+import {confGuard} from "./guardianes/conf.guard";
 
 
 @NgModule({
@@ -46,7 +48,7 @@ import {AuthGuard} from "./guardianes/auth.guard";
     AngularFirestoreModule,
     AngularFireAuthModule,
   ],
-  providers: [ClienteService,LoginService, AuthGuard],
+  providers: [ClienteService,LoginService, AuthGuard, ConfiguracionService, ConfiguracionService, confGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
